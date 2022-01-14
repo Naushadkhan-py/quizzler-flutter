@@ -10,7 +10,7 @@ class Quizzler extends StatelessWidget {
         backgroundColor: Colors.grey.shade900,
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 15.0),
             child: QuizPage(),
           ),
         ),
@@ -34,7 +34,7 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           flex: 5,
           child: Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(15.0),
             child: Center(
               child: Text(
                 'This is where the question text will go.',
@@ -84,7 +84,22 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        Row(
+          children: [
+            Icon(
+              Icons.done,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.done,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.cancel,
+              color: Colors.red,
+            )
+          ],
+        )
       ],
     );
   }
